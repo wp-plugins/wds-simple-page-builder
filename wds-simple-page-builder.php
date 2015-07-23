@@ -5,7 +5,7 @@
  * Description: Uses existing template parts in the currently-active theme to build a customized page with rearrangeable elements.
  * Author: WebDevStudios
  * Author URI: http://webdevstudios.com
- * Version: 1.4.2
+ * Version: 1.5
  * License: GPLv2
  */
 
@@ -68,7 +68,7 @@ if ( ! class_exists( 'WDS_Simple_Page_Builder' ) ) {
 			if ( ! $this->meets_requirements() ) {
 				// Display our error
 				echo '<div id="message" class="error">';
-				echo '<p>' . sprintf( __( 'WDS Simple Page Builder requires CMB2 but could not find it. The plugin has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-simple-page-builder' ), admin_url( 'plugins.php' ) ) . '</p>';
+				echo '<p>' . sprintf( esc_html__( 'WDS Simple Page Builder requires CMB2 but could not find it. The plugin has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-simple-page-builder' ), admin_url( 'plugins.php' ) ) . '</p>';
 				echo '</div>';
 
 				// Deactivate our plugin
